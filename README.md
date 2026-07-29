@@ -12,15 +12,15 @@ Una sola página estática, sin dependencias ni proceso de compilación: HTML,
 CSS y JavaScript nativo. Se publica en GitHub Pages directamente desde `main`.
 
 - `index.html` — todo el contenido, con marcado semántico
-- `styles.css` — sistema de tokens, diseño oscuro y adaptación a móvil
-- `main.js` — paleta de comandos (`Ctrl` + `K`), entrada progresiva al desplazar
-  y resplandor que sigue al puntero
+- `styles.css` — sistema de tokens, temas claro y oscuro, y adaptación a móvil
+- `main.js` — conmutador de tema, entrada progresiva al desplazar y resplandor que
+  sigue al puntero
 - `img/` — capturas reales de cada aplicación desplegada
 - `cv/` — currículum: `cv.html` es la fuente y `nicolas-andrade-cv.pdf` se genera
   desde ahí imprimiendo a PDF, así el contenido se mantiene versionado
 
-Respeta `prefers-reduced-motion`, navega completo por teclado y no carga
-recursos de terceros.
+Sigue la preferencia de tema del sistema, respeta `prefers-reduced-motion`, se
+navega completo por teclado y no carga recursos de terceros.
 
 ## Desarrollo
 
