@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nicolás Andrade — Desarrollador Fullstack</title>
+    <meta
+      name="description"
+      content="Desarrollador fullstack con más de 4 años construyendo aplicaciones web de punta a punta: C#/.NET, TypeScript, Vue, Angular y PostgreSQL. Santiago de Chile."
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:title" content="Nicolás Andrade — Desarrollador Fullstack" />
+    <meta
+      property="og:description"
+      content="Cuatro aplicaciones desplegadas, de la arquitectura al despliegue. C#/.NET, TypeScript, Vue, Angular, PostgreSQL."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0b0d'/><text y='.9em' x='50%25' text-anchor='middle' font-size='62' font-family='system-ui' font-weight='700' fill='%23f2b64c'>n</text></svg>"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a class="topbar__brand" href="#inicio">
+        <span class="topbar__mark" aria-hidden="true">n</span>
+        <span>Nicolás Andrade</span>
+      </a>
+      <nav class="topbar__nav" aria-label="Secciones">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="palette-hint" data-open-palette type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+          <path d="m21 21-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" />
+        </svg>
+        <span>Buscar</span>
+        <kbd>Ctrl</kbd><kbd>K</kbd>
+      </button>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <p class="hero__eyebrow reveal">
+            <span class="dot" aria-hidden="true"></span> Santiago de Chile · Disponible para nuevos
+            proyectos
+          </p>
+          <h1 class="hero__title reveal">
+            Construyo aplicaciones web<br />
+            <span class="accent">de punta a punta.</span>
+          </h1>
+          <p class="hero__lead reveal">
+            Desarrollador fullstack con más de 4 años de experiencia, desde la arquitectura y el
+            modelo de datos hasta el despliegue en producción. Especializado en
+            <strong>C#/.NET</strong> y <strong>TypeScript</strong>, con paso por fintech de alta
+            exigencia.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn" href="cv/nicolas-andrade-cv.pdf" download>Descargar CV</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div><dt>Años de experiencia</dt><dd>4+</dd></div>
+            <div><dt>Apps desplegadas</dt><dd>4</dd></div>
+            <div><dt>Stack principal</dt><dd>.NET · TS</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="proyectos">
+        <header class="section__head reveal">
+          <p class="section__label">Proyectos</p>
+          <h2 class="section__title">Cuatro aplicaciones, cuatro tecnologías</h2>
+          <p class="section__lead">
+            Todas están desplegadas y se pueden usar ahora mismo. Cada una explora un stack distinto
+            y resuelve un problema técnico concreto, con su código abierto para revisar.
+          </p>
+        </header>
+
+        <div class="projects">
+          <!-- Gestor de Gastos -->
+          <article class="project reveal" id="proyecto-gestor">
+            <div class="project__media">
+              <img
+                src="img/gestor-gastos.png"
+                alt="Panel de resumen del gestor de gastos, con presupuestos por categoría y gráficos de gasto mensual"
+                loading="lazy"
+                width="1360"
+                height="850"
+              />
+            </div>
+            <div class="project__body">
+              <p class="project__kicker">Fullstack · Buque insignia</p>
+              <h3 class="project__title">Gestor de Gastos</h3>
+              <p class="project__text">
+                Control de gastos personales con presupuestos por categoría, gastos recurrentes
+                automáticos e importación desde CSV. La seguridad es el corazón del proyecto:
+                autenticación en dos pasos con TOTP, rotación de tokens de refresco, límite de
+                intentos y bloqueo temporal.
+              </p>
+              <p class="project__highlight">
+                Demuestra seguridad de nivel producción y una API REST documentada sobre PostgreSQL.
+              </p>
+              <ul class="chips">
+                <li>C# / .NET 10</li>
+                <li>ASP.NET Core</li>
+                <li>Vue 3</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+              </ul>
+              <p class="project__note">
+                Cuenta de prueba: <code>demo@demo.com</code> / <code>Demo1234!</code> · la primera
+                carga puede tardar un minuto porque el servidor gratuito despierta.
+              </p>
+              <div class="project__links">
+                <a class="btn btn--small btn--primary" href="https://gestor-gastos-web.onrender.com/" target="_blank" rel="noopener">
+                  Abrir demo
+                </a>
+                <a class="btn btn--small" href="https://github.com/NicolasAndradeRetamal/gestor-gastos" target="_blank" rel="noopener">
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Notas -->
+          <article class="project reveal" id="proyecto-notas">
+            <div class="project__media">
+              <img
+                src="img/notas-app.png"
+                alt="Página de inicio de Notas, con un editor markdown y su vista previa"
+                loading="lazy"
+                width="1360"
+                height="850"
+              />
+            </div>
+            <div class="project__body">
+              <p class="project__kicker">Fullstack · IA aplicada</p>
+              <h3 class="project__title">Notas</h3>
+              <p class="project__text">
+                Notas en markdown con cuadernos y etiquetas, más una capa de inteligencia artificial:
+                búsqueda por significado con vectores, resúmenes que se escriben en streaming y un
+                chat que responde citando tus propias notas como fuente.
+              </p>
+              <p class="project__highlight">
+                Demuestra integración seria de un LLM: recuperación aumentada, streaming y
+                degradación elegante cuando el proveedor falla.
+              </p>
+              <ul class="chips">
+                <li>Next.js 16</li>
+                <li>TypeScript</li>
+                <li>Prisma</li>
+                <li>pgvector</li>
+                <li>Gemini</li>
+              </ul>
+              <div class="project__links">
+                <a class="btn btn--small btn--primary" href="https://notas-app-teal.vercel.app/" target="_blank" rel="noopener">
+                  Abrir demo
+                </a>
+                <a class="btn btn--small" href="https://github.com/NicolasAndradeRetamal/notas-app" target="_blank" rel="noopener">
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tareas -->
+          <article class="project reveal" id="proyecto-tareas">
+            <div class="project__media">
+              <img
+                src="img/tareas-angular.png"
+                alt="Tablero kanban con tarjetas repartidas en las columnas Por hacer, En progreso y Completada"
+                loading="lazy"
+                width="1360"
+                height="850"
+              />
+            </div>
+            <div class="project__body">
+              <p class="project__kicker">Frontend · Artesanía de interfaz</p>
+              <h3 class="project__title">Tareas</h3>
+              <p class="project__text">
+                Tablero kanban donde las tarjetas se arrastran entre columnas, con paleta de comandos
+                para trabajar sin soltar el teclado y deshacer/rehacer global de cualquier acción.
+                Todo vive en el navegador: sin cuentas, sin servidor.
+              </p>
+              <p class="project__highlight">
+                Demuestra Angular moderno con signals y componentes standalone, y cuidado fino de
+                interacción y accesibilidad.
+              </p>
+              <ul class="chips">
+                <li>Angular</li>
+                <li>Signals</li>
+                <li>TypeScript</li>
+                <li>Tailwind</li>
+                <li>CDK</li>
+              </ul>
+              <div class="project__links">
+                <a class="btn btn--small btn--primary" href="https://nicolasandraderetamal.github.io/tareas-angular/" target="_blank" rel="noopener">
+                  Abrir demo
+                </a>
+                <a class="btn btn--small" href="https://github.com/NicolasAndradeRetamal/tareas-angular" target="_blank" rel="noopener">
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Clima -->
+          <article class="project reveal" id="proyecto-clima">
+            <div class="project__media">
+              <img
+                src="img/clima-react.png"
+                alt="Aplicación de clima mostrando el tiempo actual en Madrid y el pronóstico de siete días"
+                loading="lazy"
+                width="1360"
+                height="850"
+              />
+            </div>
+            <div class="project__body">
+              <p class="project__kicker">Frontend · Instalable y sin conexión</p>
+              <h3 class="project__title">Clima</h3>
+              <p class="project__text">
+                Consulta del tiempo con búsqueda de ciudades, pronóstico de siete días, gráfico por
+                horas y geolocalización. Es una aplicación instalable que sigue funcionando sin
+                conexión gracias a su caché.
+              </p>
+              <p class="project__highlight">
+                Demuestra React moderno con caché de datos remotos y una PWA real, no un adorno.
+              </p>
+              <ul class="chips">
+                <li>React 19</li>
+                <li>TanStack Query</li>
+                <li>Tailwind 4</li>
+                <li>PWA</li>
+                <li>Vite</li>
+              </ul>
+              <div class="project__links">
+                <a class="btn btn--small btn--primary" href="https://nicolasandraderetamal.github.io/clima-react/" target="_blank" rel="noopener">
+                  Abrir demo
+                </a>
+                <a class="btn btn--small" href="https://github.com/NicolasAndradeRetamal/clima-react" target="_blank" rel="noopener">
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="stack">
+        <header class="section__head reveal">
+          <p class="section__label">Stack</p>
+          <h2 class="section__title">Con qué trabajo</h2>
+        </header>
+        <div class="stack reveal">
+          <div class="stack__group">
+            <h3>Lenguajes</h3>
+            <ul class="chips chips--lg">
+              <li>C#</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="stack__group">
+            <h3>Backend</h3>
+            <ul class="chips chips--lg">
+              <li>ASP.NET Core</li>
+              <li>Entity Framework</li>
+              <li>Nest.js</li>
+              <li>APIs REST</li>
+              <li>gRPC</li>
+              <li>RabbitMQ</li>
+            </ul>
+          </div>
+          <div class="stack__group">
+            <h3>Frontend</h3>
+            <ul class="chips chips--lg">
+              <li>Vue.js</li>
+              <li>Angular</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+          <div class="stack__group">
+            <h3>Datos e infraestructura</h3>
+            <ul class="chips chips--lg">
+              <li>PostgreSQL</li>
+              <li>SQL Server</li>
+              <li>Docker</li>
+              <li>Azure</li>
+              <li>GitHub Actions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trayectoria">
+        <header class="section__head reveal">
+          <p class="section__label">Trayectoria</p>
+          <h2 class="section__title">Dónde he trabajado</h2>
+        </header>
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <p class="timeline__when">Marzo 2024 — Presente</p>
+            <h3 class="timeline__role">Desarrollador Fullstack</h3>
+            <p class="timeline__where">BM Soluciones</p>
+            <p class="timeline__text">
+              Desarrollo con Vue.js, .NET y Nest.js, liderando desde la arquitectura y el modelo de
+              datos hasta el despliegue en producción con entrega continua. Punto de contacto técnico
+              con clientes: levantamiento de requisitos, demos y resolución de incidencias.
+            </p>
+          </li>
+          <li class="timeline__item reveal">
+            <p class="timeline__when">Febrero 2023 — Enero 2024</p>
+            <h3 class="timeline__role">Desarrollador Backend</h3>
+            <p class="timeline__where">Betterplan · Fintech</p>
+            <p class="timeline__text">
+              Microservicios en C# y .NET para una plataforma financiera, con mejoras de rendimiento y
+              escalabilidad. Revisiones de código, pruebas y principios SOLID en equipos ágiles.
+            </p>
+          </li>
+          <li class="timeline__item reveal">
+            <p class="timeline__when">Febrero 2022 — Septiembre 2022</p>
+            <h3 class="timeline__role">Analista de Sistemas</h3>
+            <p class="timeline__where">DNK Water</p>
+            <p class="timeline__text">
+              Aplicaciones web para el análisis automatizado de datos operativos, optimizando procesos
+              internos y reduciendo tiempos de inactividad.
+            </p>
+          </li>
+          <li class="timeline__item timeline__item--muted reveal">
+            <p class="timeline__when">2018 — 2021</p>
+            <h3 class="timeline__role">Analista Programador</h3>
+            <p class="timeline__where">INACAP</p>
+            <p class="timeline__text">Formación técnica. Español nativo · Inglés B2.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section section--contact" id="contacto">
+        <div class="contact reveal">
+          <h2 class="contact__title">¿Conversamos?</h2>
+          <p class="contact__lead">
+            Estoy abierto a oportunidades como desarrollador fullstack o backend. La forma más rápida
+            de contactarme es por correo o LinkedIn.
+          </p>
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:nicolasandraderetamal@hotmail.com">
+              nicolasandraderetamal@hotmail.com
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/nicolas-antonio-andrade-retamal" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/NicolasAndradeRetamal" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span data-year>2026</span> Nicolás Andrade Retamal · Santiago, Chile</p>
+      <p class="footer__hint">
+        Pulsa <kbd>Ctrl</kbd> <kbd>K</kbd> para buscar en esta página
+      </p>
+    </footer>
+
+    <div class="palette" data-palette hidden>
+      <div class="palette__scrim" data-palette-scrim></div>
+      <div class="palette__panel" role="dialog" aria-modal="true" aria-labelledby="palette-label">
+        <h2 class="sr-only" id="palette-label">Buscar en el sitio</h2>
+        <div class="palette__field">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+            <path d="m21 21-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" />
+          </svg>
+          <input
+            type="text"
+            data-palette-input
+            placeholder="Ir a una sección, abrir un proyecto…"
+            aria-controls="palette-results"
+            autocomplete="off"
+          />
+          <kbd>Esc</kbd>
+        </div>
+        <ul class="palette__results" id="palette-results" role="listbox" data-palette-results></ul>
+        <p class="palette__empty" data-palette-empty hidden>Sin resultados.</p>
+      </div>
+    </div>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
