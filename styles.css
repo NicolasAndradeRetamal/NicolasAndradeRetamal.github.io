@@ -189,6 +189,17 @@ code {
   font-weight: 600;
   text-decoration: none;
   letter-spacing: -0.01em;
+  /* Mientras el nombre se lee en la portada, en la barra sobra. */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 260ms var(--ease), transform 260ms var(--ease), visibility 260ms;
+}
+
+.topbar.is-past-hero .topbar__brand {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
 }
 
 .topbar__dot {
@@ -197,14 +208,6 @@ code {
   border-radius: 3px;
   background: var(--accent);
   flex: none;
-}
-
-.topbar__role {
-  color: var(--ink-subtle);
-  font-weight: 450;
-  font-size: 0.9rem;
-  padding-left: 10px;
-  border-left: 1px solid var(--line);
 }
 
 .topbar__nav {
@@ -709,8 +712,7 @@ html:not([data-theme]) .theme-toggle .icon--moon {
     order: 0;
   }
 
-  .topbar__nav,
-  .topbar__role {
+  .topbar__nav {
     display: none;
   }
 

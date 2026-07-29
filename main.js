@@ -22,6 +22,17 @@ const onScroll = () => topbar.classList.toggle('is-stuck', window.scrollY > 8);
 onScroll();
 addEventListener('scroll', onScroll, { passive: true });
 
+/* La marca aparece en la barra cuando el nombre de la portada deja de verse */
+const heroTitle = document.querySelector('.hero__title');
+if (heroTitle && 'IntersectionObserver' in window) {
+  new IntersectionObserver(
+    ([entry]) => topbar.classList.toggle('is-past-hero', !entry.isIntersecting),
+    { threshold: 0 },
+  ).observe(heroTitle);
+} else {
+  topbar.classList.add('is-past-hero');
+}
+
 /* Entrada progresiva de las secciones */
 if (!reduceMotion && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
