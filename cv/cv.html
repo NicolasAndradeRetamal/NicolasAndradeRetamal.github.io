@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nicolás Andrade Retamal · Desarrollador Fullstack</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 11mm 13mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.34;
+        color: #17171b;
+      }
+
+      a {
+        color: #5b21b6;
+        text-decoration: none;
+      }
+
+      header {
+        border-bottom: 2px solid #7c3aed;
+        padding-bottom: 6px;
+        margin-bottom: 11px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 19pt;
+        letter-spacing: -0.4px;
+      }
+
+      .rol {
+        margin: 1px 0 6px;
+        font-size: 11pt;
+        color: #5b21b6;
+        font-weight: 600;
+      }
+
+      .contacto {
+        font-size: 9pt;
+        color: #43434c;
+      }
+
+      .contacto span::after {
+        content: " · ";
+        color: #b9b9c2;
+      }
+
+      .contacto span:last-child::after {
+        content: "";
+      }
+
+      h2 {
+        font-size: 9.5pt;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: #5b21b6;
+        margin: 11px 0 5px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #e6e4ee;
+      }
+
+      p {
+        margin: 0 0 6px;
+      }
+
+      ul {
+        margin: 4px 0 0;
+        padding-left: 15px;
+      }
+
+      li {
+        margin-bottom: 2px;
+      }
+
+      .puesto {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+        margin-top: 7px;
+      }
+
+      .puesto:first-of-type {
+        margin-top: 0;
+      }
+
+      .puesto strong {
+        font-size: 10.2pt;
+      }
+
+      .empresa {
+        color: #43434c;
+      }
+
+      .fechas {
+        font-size: 9pt;
+        color: #6a6a75;
+        white-space: nowrap;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: 104px 1fr;
+        gap: 2px 10px;
+        font-size: 9.2pt;
+      }
+
+      .skills dt {
+        font-weight: 600;
+        color: #43434c;
+      }
+
+      .skills dd {
+        margin: 0;
+      }
+
+      .proyecto {
+        margin-bottom: 3px;
+      }
+
+      .cierre {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        margin-top: 12px;
+      }
+
+      .cierre section {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Nicolás Antonio Andrade Retamal</h1>
+      <p class="rol">Desarrollador Fullstack</p>
+      <p class="contacto">
+        <span>nicolasandraderetamal@hotmail.com</span>
+        <span>+56 9 2228 5663</span>
+        <span>Santiago, Chile</span>
+        <span><a href="https://www.linkedin.com/in/nicolas-antonio-andrade-retamal">linkedin.com/in/nicolas-antonio-andrade-retamal</a></span>
+        <span><a href="https://nicolasandraderetamal.github.io">nicolasandraderetamal.github.io</a></span>
+      </p>
+    </header>
+
+    <h2>Perfil profesional</h2>
+    <p>
+      Desarrollador fullstack con más de 4 años de experiencia en el ciclo completo de aplicaciones
+      web: arquitectura, modelo de datos, backend, frontend y despliegue en producción. Especializado
+      en C#/.NET y TypeScript, con experiencia en fintech y en consultoría de cara al cliente.
+    </p>
+
+    <h2>Experiencia profesional</h2>
+
+    <div class="puesto">
+      <span><strong>Desarrollador Fullstack</strong> · <span class="empresa">BMSoftware</span></span>
+      <span class="fechas">Marzo 2024 – Presente</span>
+    </div>
+    <ul>
+      <li>
+        Desarrollo a medida en un entorno de consultoría con Vue.js, .NET y Nest.js, desde el diseño
+        de la arquitectura y el modelo de datos hasta el despliegue en servidores IIS.
+      </li>
+      <li>Chats en tiempo real con WebSockets y formularios extensos con manejo de reintentos ante fallos.</li>
+      <li>Tareas en segundo plano con Hangfire para procesos largos que no deben bloquear al usuario.</li>
+      <li>
+        Punto de contacto técnico con los clientes: levantamiento de requisitos, demos y soporte, con
+        tiempo de respuesta menor a dos horas.
+      </li>
+      <li>
+        Resolución de incidencias críticas en producción, diagnosticando problemas en todo el stack
+        para garantizar la continuidad operativa.
+      </li>
+    </ul>
+
+    <div class="puesto">
+      <span><strong>Desarrollador Backend</strong> · <span class="empresa">Betterplan · Fintech</span></span>
+      <span class="fechas">Febrero 2023 – Enero 2024</span>
+    </div>
+    <ul>
+      <li>
+        Backend en C# y .NET para una plataforma de inversiones en la que cada operación mueve dinero
+        real.
+      </li>
+      <li>
+        Manejo cuidadoso de transacciones de base de datos para garantizar la integridad de las
+        operaciones monetarias.
+      </li>
+      <li>Procesos en segundo plano con Hangfire y envío masivo de correos.</li>
+      <li>
+        Mejoras de rendimiento migrando llamadas a gRPC y corrigiendo consultas de Entity Framework
+        que traían más datos de los necesarios.
+      </li>
+    </ul>
+
+    <div class="puesto">
+      <span><strong>Analista de Sistemas Junior</strong> · <span class="empresa">DNK Water</span></span>
+      <span class="fechas">Febrero 2022 – Septiembre 2022</span>
+    </div>
+    <ul>
+      <li>
+        Aplicaciones de análisis de datos con gráficos para seguir el estado de los procesos internos
+        de la empresa.
+      </li>
+      <li>
+        Soporte en tiempo real a los equipos en terreno, que dependían de enviar datos para comprobar
+        la operatividad de lo que revisaban.
+      </li>
+      <li>
+        Bot de Telegram para que esos equipos consultaran y operaran por su cuenta, sin esperar a que
+        alguien les respondiera.
+      </li>
+    </ul>
+
+    <h2>Habilidades técnicas</h2>
+    <dl class="skills">
+      <dt>Lenguajes</dt>
+      <dd>C#, TypeScript, JavaScript, SQL</dd>
+      <dt>Backend</dt>
+      <dd>ASP.NET Core, Entity Framework Core, LINQ, Nest.js, APIs REST, gRPC, RabbitMQ, Hangfire, WebSockets</dd>
+      <dt>Frontend</dt>
+      <dd>Vue.js, Angular, React, Next.js, Tailwind CSS</dd>
+      <dt>Bases de datos</dt>
+      <dd>PostgreSQL, SQL Server</dd>
+      <dt>Cloud y DevOps</dt>
+      <dd>Microsoft Azure, Azure AD, Docker, IIS, Git, GitHub Actions</dd>
+      <dt>Herramientas</dt>
+      <dd>Visual Studio, VS Code, Figma, Postman, Claude AI, GitHub Copilot</dd>
+      <dt>Metodologías</dt>
+      <dd>Agile / Scrum, desarrollo iterativo</dd>
+    </dl>
+
+    <h2>Proyectos personales</h2>
+    <p class="proyecto">
+      <strong>Gestor de Gastos</strong> · .NET, Vue 3 y PostgreSQL. Verificación en dos pasos con TOTP, rotación de tokens, presupuestos y gastos recurrentes.
+    </p>
+    <p class="proyecto">
+      <strong>Notas</strong> · Next.js, Prisma y pgvector. Búsqueda por significado y chat que responde citando las notas del usuario.
+    </p>
+    <p class="proyecto">
+      <strong>Tareas</strong> · Angular con signals. Kanban con arrastre entre columnas, paleta de comandos y deshacer/rehacer global.
+    </p>
+    <p class="proyecto">
+      <strong>Clima</strong> · React y TanStack Query. Aplicación instalable que funciona sin conexión.
+    </p>
+    <p style="margin-top: 5px; font-size: 9.4pt; color: #43434c">
+      Los cuatro están desplegados, con su código y su documentación de arquitectura en
+      <a href="https://github.com/NicolasAndradeRetamal">github.com/NicolasAndradeRetamal</a>.
+    </p>
+
+    <div class="cierre">
+      <section>
+        <h2>Educación</h2>
+        <p><strong>Analista Programador</strong><br />CFT INACAP · 2018 – 2021</p>
+      </section>
+      <section>
+        <h2>Idiomas</h2>
+        <p>Español: nativo<br />Inglés: B2, intermedio avanzado</p>
+      </section>
+    </div>
+  </body>
+</html>
