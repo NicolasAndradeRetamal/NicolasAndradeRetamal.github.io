@@ -3,6 +3,19 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 /* Año del pie */
 document.querySelector('[data-year]').textContent = String(new Date().getFullYear());
 
+/* Tema: sigue al sistema salvo que el visitante elija otra cosa */
+const root = document.documentElement;
+const stored = localStorage.getItem('tema');
+if (stored === 'light' || stored === 'dark') root.dataset.theme = stored;
+
+document.querySelector('[data-theme-toggle]').addEventListener('click', () => {
+  const sistemaEsClaro = matchMedia('(prefers-color-scheme: light)').matches;
+  const actual = root.dataset.theme || (sistemaEsClaro ? 'light' : 'dark');
+  const siguiente = actual === 'dark' ? 'light' : 'dark';
+  root.dataset.theme = siguiente;
+  localStorage.setItem('tema', siguiente);
+});
+
 /* Borde de la barra al desplazar */
 const topbar = document.querySelector('.topbar');
 const onScroll = () => topbar.classList.toggle('is-stuck', window.scrollY > 8);
