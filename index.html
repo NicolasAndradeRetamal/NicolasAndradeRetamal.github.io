@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0b0d'/><text y='.9em' x='50%25' text-anchor='middle' font-size='62' font-family='system-ui' font-weight='700' fill='%23f2b64c'>n</text></svg>"
+      href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><rect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%238b5cf6%27/><text y=%27.9em%27 x=%2750%25%27 text-anchor=%27middle%27 font-size=%2758%27 font-family=%27system-ui%27 font-weight=%27700%27 fill=%27white%27>NA</text></svg>"
     />
   </head>
   <body>
@@ -26,7 +26,6 @@
 
     <header class="topbar">
       <a class="topbar__brand" href="#inicio">
-        <span class="topbar__mark" aria-hidden="true">n</span>
         <span>Nicolás Andrade</span>
       </a>
       <nav class="topbar__nav" aria-label="Secciones">
@@ -35,13 +34,6 @@
         <a href="#trayectoria">Trayectoria</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <button class="palette-hint" data-open-palette type="button">
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
-          <path d="m21 21-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" />
-        </svg>
-        <span>Buscar</span>
-        <kbd>Ctrl</kbd><kbd>K</kbd>
-      </button>
       <button class="theme-toggle" data-theme-toggle type="button" aria-label="Cambiar el tema">
         <svg viewBox="0 0 24 24" aria-hidden="true" class="icon icon--sun">
           <circle cx="12" cy="12" r="4.2" />
@@ -58,8 +50,7 @@
         <div class="hero__glow" aria-hidden="true"></div>
         <div class="hero__inner">
           <p class="hero__eyebrow reveal">
-            <span class="dot" aria-hidden="true"></span> Santiago de Chile · Disponible para nuevos
-            proyectos
+            Santiago de Chile
           </p>
           <h1 class="hero__title reveal">
             Construyo aplicaciones web<br />
@@ -78,7 +69,7 @@
           <dl class="hero__stats reveal">
             <div><dt>Años de experiencia</dt><dd>4+</dd></div>
             <div><dt>Apps desplegadas</dt><dd>4</dd></div>
-            <div><dt>Stack principal</dt><dd>.NET · TS</dd></div>
+            <div><dt>Stack principal</dt><dd>.NET · Vue · TS</dd></div>
           </dl>
         </div>
       </section>
@@ -88,10 +79,9 @@
           <p class="section__label">Proyectos personales</p>
           <h2 class="section__title">Cuatro laboratorios, cuatro stacks</h2>
           <p class="section__lead">
-            No son productos con usuarios: son proyectos propios que construí para llevar cada
-            tecnología hasta un punto realista —autenticación, pruebas, integración continua y
-            despliegue— en vez de quedarme en el tutorial. Cada repositorio incluye además su
-            documento de arquitectura y su sistema de diseño, con las decisiones justificadas.
+            Son proyectos personales, no productos con usuarios. Los hice para practicar cada stack
+            a fondo: con autenticación, pruebas, integración continua y despliegue real. En cada
+            repositorio dejé documentada la arquitectura y las decisiones de diseño.
           </p>
         </header>
 
@@ -117,7 +107,7 @@
                 intentos y bloqueo temporal.
               </p>
               <p class="project__highlight">
-                Demuestra seguridad de nivel producción y una API REST documentada sobre PostgreSQL.
+                Demuestra autenticación de nivel producción y una API REST documentada con Swagger.
               </p>
               <ul class="chips">
                 <li>C# / .NET 10</li>
@@ -377,32 +367,8 @@
 
     <footer class="footer">
       <p>© <span data-year>2026</span> Nicolás Andrade Retamal · Santiago, Chile</p>
-      <p class="footer__hint">
-        Pulsa <kbd>Ctrl</kbd> <kbd>K</kbd> para buscar en esta página
-      </p>
     </footer>
 
-    <div class="palette" data-palette hidden>
-      <div class="palette__scrim" data-palette-scrim></div>
-      <div class="palette__panel" role="dialog" aria-modal="true" aria-labelledby="palette-label">
-        <h2 class="sr-only" id="palette-label">Buscar en el sitio</h2>
-        <div class="palette__field">
-          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
-            <path d="m21 21-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" />
-          </svg>
-          <input
-            type="text"
-            data-palette-input
-            placeholder="Ir a una sección, abrir un proyecto…"
-            aria-controls="palette-results"
-            autocomplete="off"
-          />
-          <kbd>Esc</kbd>
-        </div>
-        <ul class="palette__results" id="palette-results" role="listbox" data-palette-results></ul>
-        <p class="palette__empty" data-palette-empty hidden>Sin resultados.</p>
-      </div>
-    </div>
 
     <script src="main.js" defer></script>
   </body>
