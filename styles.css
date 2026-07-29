@@ -191,6 +191,22 @@ code {
   letter-spacing: -0.01em;
 }
 
+.topbar__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: var(--accent);
+  flex: none;
+}
+
+.topbar__role {
+  color: var(--ink-subtle);
+  font-weight: 450;
+  font-size: 0.9rem;
+  padding-left: 10px;
+  border-left: 1px solid var(--line);
+}
+
 .topbar__nav {
   margin-left: auto;
   display: flex;
@@ -318,6 +334,14 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 
 .accent {
   color: var(--accent-text);
+}
+
+.hero__role {
+  margin-top: 14px;
+  font-size: clamp(1.35rem, 3.2vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink-muted);
 }
 
 .hero__lead {
@@ -500,12 +524,22 @@ html:not([data-theme]) .theme-toggle .icon--moon {
   color: var(--ink-muted);
 }
 
-.project__highlight {
-  margin-top: 14px;
-  padding-left: 14px;
-  border-left: 2px solid var(--accent);
+.project__challenge {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--accent-soft);
   color: var(--ink);
-  font-size: 0.97rem;
+  font-size: 0.95rem;
+}
+
+.project__challenge-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  margin-bottom: 4px;
 }
 
 .project__note {
@@ -675,7 +709,8 @@ html:not([data-theme]) .theme-toggle .icon--moon {
     order: 0;
   }
 
-  .topbar__nav {
+  .topbar__nav,
+  .topbar__role {
     display: none;
   }
 

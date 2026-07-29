@@ -26,7 +26,9 @@
 
     <header class="topbar">
       <a class="topbar__brand" href="#inicio">
+        <span class="topbar__dot" aria-hidden="true"></span>
         <span>Nicolás Andrade</span>
+        <span class="topbar__role">Desarrollador fullstack</span>
       </a>
       <nav class="topbar__nav" aria-label="Secciones">
         <a href="#proyectos">Proyectos</a>
@@ -52,12 +54,12 @@
           <p class="hero__eyebrow reveal">
             Santiago de Chile
           </p>
-          <h1 class="hero__title reveal">
-            Construyo aplicaciones web<br />
-            <span class="accent">de punta a punta.</span>
-          </h1>
+          <h1 class="hero__title reveal">Nicolás Andrade</h1>
+          <p class="hero__role reveal">
+            Desarrollador <span class="accent">fullstack</span>
+          </p>
           <p class="hero__lead reveal">
-            Desarrollador fullstack con más de 4 años de experiencia, desde la arquitectura y el
+            Más de 4 años construyendo aplicaciones web completas, desde la arquitectura y el
             modelo de datos hasta el despliegue en producción. Especializado en
             <strong>C#/.NET</strong> y <strong>TypeScript</strong>, con paso por fintech de alta
             exigencia.
@@ -106,9 +108,7 @@
                 autenticación en dos pasos con TOTP, rotación de tokens de refresco, límite de
                 intentos y bloqueo temporal.
               </p>
-              <p class="project__highlight">
-                Demuestra autenticación de nivel producción y una API REST documentada con Swagger.
-              </p>
+              <p class="project__challenge"><span class="project__challenge-label">El reto</span> Añadir la verificación en dos pasos y la rotación de tokens a una aplicación que ya estaba desplegada, sin invalidar las sesiones ni los datos existentes.</p>
               <ul class="chips">
                 <li>C# / .NET 10</li>
                 <li>ASP.NET Core</li>
@@ -150,10 +150,7 @@
                 búsqueda por significado con vectores, resúmenes que se escriben en streaming y un
                 chat que responde citando tus propias notas como fuente.
               </p>
-              <p class="project__highlight">
-                Demuestra integración seria de un LLM: recuperación aumentada, streaming y
-                degradación elegante cuando el proveedor falla.
-              </p>
+              <p class="project__challenge"><span class="project__challenge-label">El reto</span> Conseguir que el chat responda solo con las notas del usuario y cite de dónde sacó cada respuesta, en vez de inventar cuando no encuentra nada.</p>
               <ul class="chips">
                 <li>Next.js 16</li>
                 <li>TypeScript</li>
@@ -191,10 +188,7 @@
                 para trabajar sin soltar el teclado y deshacer/rehacer global de cualquier acción.
                 Todo vive en el navegador: sin cuentas, sin servidor.
               </p>
-              <p class="project__highlight">
-                Demuestra Angular moderno con signals y componentes standalone, y cuidado fino de
-                interacción y accesibilidad.
-              </p>
+              <p class="project__challenge"><span class="project__challenge-label">El reto</span> Que deshacer y rehacer funcione con cualquier acción, incluidas las de arrastrar, sin perder el manejo por teclado del tablero.</p>
               <ul class="chips">
                 <li>Angular</li>
                 <li>Signals</li>
@@ -232,9 +226,7 @@
                 horas y geolocalización. Es una aplicación instalable que sigue funcionando sin
                 conexión gracias a su caché.
               </p>
-              <p class="project__highlight">
-                Demuestra React moderno con caché de datos remotos y una PWA real, no un adorno.
-              </p>
+              <p class="project__challenge"><span class="project__challenge-label">El reto</span> Que siga siendo útil sin conexión mostrando la última consulta guardada, dejando claro que esos datos no son los actuales.</p>
               <ul class="chips">
                 <li>React 19</li>
                 <li>TanStack Query</li>
