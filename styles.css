@@ -19,6 +19,7 @@
   --shadow: 0 18px 50px rgba(0, 0, 0, var(--shadow-strength));
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --wrap: 1120px;
+  --mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Consolas, monospace;
 }
 
 /* Tema claro: por preferencia del sistema, o elegido a mano con data-theme. */
@@ -183,6 +184,7 @@ code {
 }
 
 .topbar__brand {
+  font-family: var(--mono);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -295,6 +297,19 @@ html:not([data-theme]) .theme-toggle .icon--moon {
   overflow: hidden;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+  opacity: 0.055;
+  -webkit-mask-image: radial-gradient(85% 75% at 25% 25%, #000, transparent);
+  mask-image: radial-gradient(85% 75% at 25% 25%, #000, transparent);
+  pointer-events: none;
+}
+
 .hero__glow {
   position: absolute;
   inset: -35% -25% -20%;
@@ -317,6 +332,7 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 }
 
 .hero__eyebrow {
+  font-family: var(--mono);
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -376,10 +392,9 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 }
 
 .hero__stats dt {
-  font-size: 0.82rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
   color: var(--ink-subtle);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 .hero__stats dd {
@@ -447,11 +462,15 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 }
 
 .section__label {
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 0.84rem;
   color: var(--accent-text);
   margin-bottom: 14px;
+}
+
+.section__label::before {
+  content: "// ";
+  opacity: 0.55;
 }
 
 .section__title {
@@ -511,9 +530,8 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 }
 
 .project__kicker {
+  font-family: var(--mono);
   font-size: 0.82rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--ink-subtle);
   margin-bottom: 10px;
 }
@@ -538,11 +556,15 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 
 .project__challenge-label {
   display: block;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 0.76rem;
   color: var(--accent-text);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+}
+
+.project__challenge-label::before {
+  content: "# ";
+  opacity: 0.55;
 }
 
 .project__note {
@@ -568,7 +590,8 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 }
 
 .chips li {
-  font-size: 0.8rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
   color: var(--ink-muted);
   border: 1px solid var(--line);
   background: var(--bg-sunken);
@@ -590,11 +613,10 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 }
 
 .stack__group h3 {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 0.86rem;
   color: var(--ink-subtle);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* ---------- Trayectoria ---------- */
@@ -629,9 +651,8 @@ html:not([data-theme]) .theme-toggle .icon--moon {
 }
 
 .timeline__when {
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 0.8rem;
   color: var(--ink-subtle);
 }
 
