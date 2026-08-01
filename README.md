@@ -4,19 +4,22 @@ Portafolio profesional de Nicolás Andrade Retamal, Desarrollador Fullstack espe
 
 **En línea:** <https://nicolasandraderetamal.github.io>
 
-## Enfoque del sitio
+## Contenido
 
-El sitio prioriza la experiencia profesional y presenta los proyectos de código público como muestras técnicas complementarias. No incluye nombres ni detalles confidenciales de clientes o proyectos internos.
+- Experiencia profesional
+- Proyectos con demo y repositorio
+- Stack técnico
+- Formación, idiomas y enlaces de contacto
 
 ## Estructura
 
-- `index.html` — contenido principal, experiencia, proyectos, stack y contacto
-- `styles.css` — temas claro/oscuro, diseño responsive y accesibilidad
-- `main.js` — tema, menú móvil, animaciones y efectos de portada
-- `img/` — capturas de los proyectos y Open Graph
-- `cv/` — currículum descargable y su fuente HTML
+- `index.html` — contenido principal y metadatos SEO
+- `styles.css` — temas claro/oscuro, diseño responsive y efectos visuales
+- `main.js` — navegación móvil, tema, animaciones, sección activa y efectos de interacción
+- `img/` — capturas de los proyectos e imagen Open Graph
+- `cv/` — currículum descargable y fuente HTML
 
-No utiliza dependencias ni proceso de compilación. GitHub Pages puede publicarlo directamente desde la rama principal.
+El sitio no utiliza dependencias ni proceso de compilación. GitHub Pages puede publicarlo directamente desde la rama principal.
 
 ## Desarrollo local
 

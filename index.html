@@ -8,7 +8,7 @@
       name="description"
       content="Desarrollador Fullstack en Santiago de Chile con más de 4 años de experiencia en C#/.NET, TypeScript, aplicaciones empresariales, integración de sistemas y automatización de procesos."
     />
-    <meta name="theme-color" content="#0a0a0c" />
+    <meta name="theme-color" content="#09090d" />
     <meta name="color-scheme" content="dark light" />
     <link rel="canonical" href="https://nicolasandraderetamal.github.io/" />
 
@@ -38,6 +38,9 @@
     <meta property="og:locale" content="es_CL" />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="icon"
@@ -74,11 +77,14 @@
     </script>
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true">
+      <span data-scroll-progress></span>
+    </div>
     <a class="skip" href="#contenido">Saltar al contenido</a>
 
     <header class="topbar" data-topbar>
       <a class="topbar__brand" href="#inicio" aria-label="Ir al inicio">
-        <span class="topbar__dot" aria-hidden="true"></span>
+        <span class="topbar__prompt" aria-hidden="true">~/</span>
         <span>NAR</span>
       </a>
 
@@ -99,10 +105,10 @@
         data-navigation
         aria-label="Secciones"
       >
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Código público</a>
-        <a href="#stack">Stack</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#experiencia" data-nav-link>Experiencia</a>
+        <a href="#proyectos" data-nav-link>Proyectos</a>
+        <a href="#stack" data-nav-link>Stack</a>
+        <a href="#contacto" data-nav-link>Contacto</a>
       </nav>
 
       <button
@@ -124,66 +130,80 @@
     </header>
 
     <main id="contenido">
-      <section class="hero" id="inicio">
+      <section class="hero" id="inicio" data-section>
         <div class="hero__glow" aria-hidden="true"></div>
-        <div class="hero__inner">
-          <p class="hero__eyebrow reveal">
-            Santiago de Chile · 4+ años de experiencia
-          </p>
-          <h1 class="hero__title reveal">Nicolás Andrade</h1>
-          <p class="hero__role reveal">
-            Desarrollador Fullstack
-            <span class="accent">C#/.NET · TypeScript</span>
-          </p>
-          <p class="hero__lead reveal">
-            Desarrollo aplicaciones empresariales y participo en soluciones de
-            extremo a extremo: análisis, diseño, frontend, backend, integración
-            entre sistemas, despliegue y soporte en producción.
-          </p>
-          <div class="hero__actions reveal">
-            <a class="btn btn--primary" href="#experiencia">Ver experiencia</a>
-            <a class="btn" href="cv/nicolas-andrade-cv.pdf" download
-              >Descargar CV</a
-            >
-            <a
-              class="btn btn--quiet"
-              href="https://www.linkedin.com/in/nicolas-antonio-andrade-retamal"
-              target="_blank"
-              rel="me noopener noreferrer"
-              >LinkedIn</a
-            >
+        <div class="hero__grid" aria-hidden="true"></div>
+
+        <div class="hero__layout">
+          <div class="hero__copy">
+            <p class="hero__eyebrow reveal">
+              Santiago de Chile · 4+ años de experiencia
+            </p>
+            <h1 class="hero__title reveal">Nicolás Andrade</h1>
+            <p class="hero__role reveal">
+              Desarrollador Fullstack
+              <span class="accent">C#/.NET · TypeScript</span>
+            </p>
+            <p class="hero__lead reveal">
+              Desarrollo aplicaciones empresariales y participo en soluciones de
+              extremo a extremo: análisis, diseño, frontend, backend,
+              integración entre sistemas, despliegue y soporte en producción.
+            </p>
+            <div class="hero__actions reveal">
+              <a class="btn btn--primary" href="#experiencia"
+                >Ver experiencia</a
+              >
+              <a class="btn" href="cv/nicolas-andrade-cv.pdf" download
+                >Descargar CV</a
+              >
+              <a
+                class="btn btn--quiet"
+                href="https://www.linkedin.com/in/nicolas-antonio-andrade-retamal"
+                target="_blank"
+                rel="me noopener noreferrer"
+                >LinkedIn</a
+              >
+            </div>
           </div>
 
-          <dl class="hero__proof reveal">
-            <div>
-              <dt>Ámbito</dt>
-              <dd>Aplicaciones empresariales</dd>
+          <aside class="terminal reveal" data-tilt aria-label="Resumen técnico">
+            <div class="terminal__bar">
+              <span class="terminal__dots" aria-hidden="true"
+                ><i></i><i></i><i></i
+              ></span>
+              <span class="terminal__file">perfil.ts</span>
+              <span class="terminal__status">UTF-8</span>
             </div>
-            <div>
-              <dt>Experiencia</dt>
-              <dd>Fintech, automotriz, educación, logística e industria</dd>
-            </div>
-            <div>
-              <dt>Foco</dt>
-              <dd>Integraciones, automatización y producción</dd>
-            </div>
-          </dl>
+            <pre
+              class="terminal__code"
+              aria-hidden="true"
+            ><code><span class="code-line" style="--line: 1"><span class="code-keyword">const</span> <span class="code-name">perfil</span> = {</span>
+<span class="code-line" style="--line: 2">  experiencia: <span class="code-string">"4+ años"</span>,</span>
+<span class="code-line" style="--line: 3">  backend: [<span class="code-string">".NET"</span>, <span class="code-string">"NestJS"</span>],</span>
+<span class="code-line" style="--line: 4">  frontend: [<span class="code-string">"Vue"</span>, <span class="code-string">"Angular"</span>],</span>
+<span class="code-line" style="--line: 5">  enfoque: [</span>
+<span class="code-line" style="--line: 6">    <span class="code-string">"integraciones"</span>,</span>
+<span class="code-line" style="--line: 7">    <span class="code-string">"automatización"</span>,</span>
+<span class="code-line" style="--line: 8">    <span class="code-string">"producción"</span></span>
+<span class="code-line" style="--line: 9">  ]</span>
+<span class="code-line" style="--line: 10">};<span class="code-cursor"></span></span></code></pre>
+          </aside>
         </div>
       </section>
 
-      <section class="section" id="experiencia">
+      <section class="section" id="experiencia" data-section>
         <header class="section__head reveal">
-          <p class="section__eyebrow">Experiencia</p>
-          <h2 class="section__title">Trabajo profesional</h2>
+          <p class="section__eyebrow">01 / Trayectoria</p>
+          <h2 class="section__title">Experiencia profesional</h2>
           <p class="section__lead">
-            Este es el eje de mi perfil. Resumo los problemas y
-            responsabilidades en los que he participado sin exponer información
-            confidencial de clientes o proyectos internos.
+            Aplicaciones empresariales, integraciones entre sistemas,
+            automatización de procesos y soporte en producción.
           </p>
         </header>
 
         <div class="experience-list">
-          <article class="experience reveal">
+          <article class="experience interactive-card reveal" data-card>
+            <span class="experience__marker" aria-hidden="true"></span>
             <header class="experience__head">
               <div>
                 <p class="experience__when">Marzo 2024 — Actualidad</p>
@@ -226,7 +246,8 @@
             </ul>
           </article>
 
-          <article class="experience reveal">
+          <article class="experience interactive-card reveal" data-card>
+            <span class="experience__marker" aria-hidden="true"></span>
             <header class="experience__head">
               <div>
                 <p class="experience__when">Febrero 2023 — Enero 2024</p>
@@ -263,7 +284,8 @@
             </ul>
           </article>
 
-          <article class="experience reveal">
+          <article class="experience interactive-card reveal" data-card>
+            <span class="experience__marker" aria-hidden="true"></span>
             <header class="experience__head">
               <div>
                 <p class="experience__when">Febrero 2022 — Septiembre 2022</p>
@@ -297,19 +319,23 @@
         </div>
       </section>
 
-      <section class="section section--projects" id="proyectos">
+      <section class="section section--projects" id="proyectos" data-section>
         <header class="section__head reveal">
-          <p class="section__eyebrow">Código público</p>
-          <h2 class="section__title">Proyectos de portafolio</h2>
+          <p class="section__eyebrow">02 / Portafolio</p>
+          <h2 class="section__title">Proyectos</h2>
           <p class="section__lead">
-            Proyectos acotados creados para demostrar tecnologías y decisiones
-            de implementación con código público y despliegue real. Complementan
-            —no reemplazan— mi experiencia profesional.
+            Aplicaciones con demo y repositorio, desarrolladas con distintos
+            stacks y enfoques técnicos.
           </p>
         </header>
 
         <div class="projects">
-          <article class="project reveal" id="proyecto-gestor">
+          <article
+            class="project interactive-card reveal"
+            id="proyecto-gestor"
+            data-card
+            data-tilt
+          >
             <a
               class="project__media"
               href="https://gestor-gastos-web.onrender.com/"
@@ -333,11 +359,13 @@
                 Aplicación para presupuestos, categorías, gastos recurrentes e
                 importación desde CSV.
               </p>
-              <p class="project__focus">
-                <span>Demuestra</span> autenticación TOTP, rotación de refresh
-                tokens, control de intentos y evolución de una aplicación ya
-                desplegada.
-              </p>
+              <div class="project__focus">
+                <span>Aspectos técnicos</span>
+                <p>
+                  Autenticación TOTP, rotación de refresh tokens, control de
+                  intentos y evolución de una aplicación ya desplegada.
+                </p>
+              </div>
               <ul class="chips">
                 <li>C# / .NET</li>
                 <li>Vue 3</li>
@@ -345,8 +373,9 @@
                 <li>Docker</li>
               </ul>
               <p class="project__note">
-                Prueba: <code>demo@demo.com</code> / <code>Demo1234!</code>. El
-                servidor gratuito puede tardar en iniciar.
+                Acceso de prueba: <code>demo@demo.com</code> /
+                <code>Demo1234!</code>. El servidor gratuito puede tardar en
+                iniciar.
               </p>
               <div class="project__links">
                 <a
@@ -354,20 +383,25 @@
                   href="https://gestor-gastos-web.onrender.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Abrir demo</a
+                  >Demo</a
                 >
                 <a
                   class="btn btn--small"
                   href="https://github.com/NicolasAndradeRetamal/gestor-gastos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Ver código</a
+                  >Repositorio</a
                 >
               </div>
             </div>
           </article>
 
-          <article class="project reveal" id="proyecto-notas">
+          <article
+            class="project interactive-card reveal"
+            id="proyecto-notas"
+            data-card
+            data-tilt
+          >
             <a
               class="project__media"
               href="https://notas-app-teal.vercel.app/"
@@ -391,11 +425,13 @@
                 Notas Markdown con cuadernos, etiquetas, búsqueda semántica,
                 resúmenes en streaming y chat sobre el contenido del usuario.
               </p>
-              <p class="project__focus">
-                <span>Demuestra</span> recuperación semántica con pgvector y
-                respuestas que citan sus fuentes y reconocen cuando no existe
-                evidencia suficiente.
-              </p>
+              <div class="project__focus">
+                <span>Aspectos técnicos</span>
+                <p>
+                  Recuperación semántica con pgvector y respuestas que citan sus
+                  fuentes y reconocen cuando no existe evidencia suficiente.
+                </p>
+              </div>
               <ul class="chips">
                 <li>Next.js</li>
                 <li>TypeScript</li>
@@ -408,20 +444,25 @@
                   href="https://notas-app-teal.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Abrir demo</a
+                  >Demo</a
                 >
                 <a
                   class="btn btn--small"
                   href="https://github.com/NicolasAndradeRetamal/notas-app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Ver código</a
+                  >Repositorio</a
                 >
               </div>
             </div>
           </article>
 
-          <article class="project reveal" id="proyecto-tareas">
+          <article
+            class="project interactive-card reveal"
+            id="proyecto-tareas"
+            data-card
+            data-tilt
+          >
             <a
               class="project__media"
               href="https://nicolasandraderetamal.github.io/tareas-angular/"
@@ -445,11 +486,13 @@
                 Tablero kanban local con arrastre entre columnas, paleta de
                 comandos y operación por teclado.
               </p>
-              <p class="project__focus">
-                <span>Demuestra</span> estado con Signals y un historial global
-                de deshacer/rehacer que incluye movimientos mediante drag and
-                drop.
-              </p>
+              <div class="project__focus">
+                <span>Aspectos técnicos</span>
+                <p>
+                  Estado con Signals y un historial global de deshacer y rehacer
+                  que incluye los movimientos mediante drag and drop.
+                </p>
+              </div>
               <ul class="chips">
                 <li>Angular</li>
                 <li>Signals</li>
@@ -462,20 +505,25 @@
                   href="https://nicolasandraderetamal.github.io/tareas-angular/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Abrir demo</a
+                  >Demo</a
                 >
                 <a
                   class="btn btn--small"
                   href="https://github.com/NicolasAndradeRetamal/tareas-angular"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Ver código</a
+                  >Repositorio</a
                 >
               </div>
             </div>
           </article>
 
-          <article class="project reveal" id="proyecto-clima">
+          <article
+            class="project interactive-card reveal"
+            id="proyecto-clima"
+            data-card
+            data-tilt
+          >
             <a
               class="project__media"
               href="https://nicolasandraderetamal.github.io/clima-react/"
@@ -499,11 +547,13 @@
                 Consulta meteorológica con búsqueda, geolocalización, pronóstico
                 semanal y gráfico por horas.
               </p>
-              <p class="project__focus">
-                <span>Demuestra</span> instalación como PWA, caché de la última
-                consulta y comunicación explícita cuando los datos mostrados
-                están desactualizados.
-              </p>
+              <div class="project__focus">
+                <span>Aspectos técnicos</span>
+                <p>
+                  Instalación como PWA, caché de la última consulta y estados
+                  claros cuando los datos mostrados están desactualizados.
+                </p>
+              </div>
               <ul class="chips">
                 <li>React</li>
                 <li>TanStack Query</li>
@@ -516,14 +566,14 @@
                   href="https://nicolasandraderetamal.github.io/clima-react/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Abrir demo</a
+                  >Demo</a
                 >
                 <a
                   class="btn btn--small"
                   href="https://github.com/NicolasAndradeRetamal/clima-react"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Ver código</a
+                  >Repositorio</a
                 >
               </div>
             </div>
@@ -531,14 +581,14 @@
         </div>
       </section>
 
-      <section class="section section--tight" id="stack">
+      <section class="section section--tight" id="stack" data-section>
         <header class="section__head reveal">
-          <p class="section__eyebrow">Herramientas</p>
+          <p class="section__eyebrow">03 / Tecnologías</p>
           <h2 class="section__title">Stack técnico</h2>
         </header>
 
         <div class="stack reveal">
-          <section class="stack__group">
+          <section class="stack__group interactive-card" data-card>
             <h3>Lenguajes</h3>
             <ul class="chips chips--lg">
               <li>C#</li>
@@ -547,7 +597,7 @@
               <li>SQL</li>
             </ul>
           </section>
-          <section class="stack__group">
+          <section class="stack__group interactive-card" data-card>
             <h3>Backend</h3>
             <ul class="chips chips--lg">
               <li>ASP.NET Core</li>
@@ -560,7 +610,7 @@
               <li>RabbitMQ</li>
             </ul>
           </section>
-          <section class="stack__group">
+          <section class="stack__group interactive-card" data-card>
             <h3>Frontend</h3>
             <ul class="chips chips--lg">
               <li>Vue.js</li>
@@ -570,7 +620,7 @@
               <li>Tailwind CSS</li>
             </ul>
           </section>
-          <section class="stack__group">
+          <section class="stack__group interactive-card" data-card>
             <h3>Datos</h3>
             <ul class="chips chips--lg">
               <li>PostgreSQL</li>
@@ -578,7 +628,7 @@
               <li>Oracle</li>
             </ul>
           </section>
-          <section class="stack__group">
+          <section class="stack__group interactive-card" data-card>
             <h3>Seguridad</h3>
             <ul class="chips chips--lg">
               <li>OAuth 2.0</li>
@@ -588,7 +638,7 @@
               <li>Azure AD / Entra ID</li>
             </ul>
           </section>
-          <section class="stack__group">
+          <section class="stack__group interactive-card" data-card>
             <h3>Cloud y DevOps</h3>
             <ul class="chips chips--lg">
               <li>Azure</li>
@@ -619,36 +669,45 @@
         </div>
       </section>
 
-      <section class="section section--contact" id="contacto">
-        <div class="contact reveal">
-          <p class="section__eyebrow">Contacto</p>
-          <h2 class="contact__title">Hablemos</h2>
-          <p class="contact__lead">
-            Para oportunidades o consultas profesionales, puedes escribirme por
-            correo o contactarme mediante LinkedIn.
-          </p>
-          <div class="contact__actions">
-            <a
-              class="btn btn--primary"
-              href="mailto:nicolasandraderetamal@hotmail.com"
-              >Enviar correo</a
+      <section class="section section--contact" id="contacto" data-section>
+        <header class="section__head section__head--contact reveal">
+          <p class="section__eyebrow">04 / Contacto</p>
+          <h2 class="section__title">Contacto</h2>
+        </header>
+
+        <div class="contact-links reveal">
+          <a
+            class="contact-link"
+            href="mailto:nicolasandraderetamal@hotmail.com"
+          >
+            <span class="contact-link__label">Correo</span>
+            <span class="contact-link__value"
+              >nicolasandraderetamal@hotmail.com</span
             >
-            <a
-              class="btn"
-              href="https://www.linkedin.com/in/nicolas-antonio-andrade-retamal"
-              target="_blank"
-              rel="me noopener noreferrer"
-              >LinkedIn</a
+            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/nicolas-antonio-andrade-retamal"
+            target="_blank"
+            rel="me noopener noreferrer"
+          >
+            <span class="contact-link__label">LinkedIn</span>
+            <span class="contact-link__value"
+              >nicolas-antonio-andrade-retamal</span
             >
-            <a
-              class="btn"
-              href="https://github.com/NicolasAndradeRetamal"
-              target="_blank"
-              rel="me noopener noreferrer"
-              >GitHub</a
-            >
-          </div>
-          <p class="contact__email">nicolasandraderetamal@hotmail.com</p>
+            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a
+            class="contact-link"
+            href="https://github.com/NicolasAndradeRetamal"
+            target="_blank"
+            rel="me noopener noreferrer"
+          >
+            <span class="contact-link__label">GitHub</span>
+            <span class="contact-link__value">NicolasAndradeRetamal</span>
+            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </main>
