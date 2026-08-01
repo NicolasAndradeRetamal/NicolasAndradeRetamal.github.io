@@ -5,6 +5,18 @@ const reduceMotion = window.matchMedia(
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const systemTheme = window.matchMedia("(prefers-color-scheme: light)");
 
+const english = root.lang === "en";
+const label = {
+  lightTheme: english ? "Switch to light theme" : "Cambiar a tema claro",
+  darkTheme: english ? "Switch to dark theme" : "Cambiar a tema oscuro",
+  openMenu: english ? "Open navigation" : "Abrir navegación",
+  closeMenu: english ? "Close navigation" : "Cerrar navegación",
+  copy: english ? "Copy" : "Copiar",
+  copied: english ? "Copied ✓" : "Copiado ✓",
+  copyManually: "Ctrl+C",
+  copyMail: english ? "Copy email address" : "Copiar dirección de correo",
+};
+
 /* Tema */
 let storedTheme = null;
 try {
@@ -24,7 +36,7 @@ const updateThemeUI = () => {
   const dark = getTheme() === "dark";
   themeToggle?.setAttribute(
     "aria-label",
-    dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro",
+    dark ? label.lightTheme : label.darkTheme,
   );
   themeColor?.setAttribute("content", dark ? "#09090d" : "#f8f7f4");
 };
@@ -43,6 +55,62 @@ themeToggle?.addEventListener("click", () => {
 systemTheme.addEventListener?.("change", () => {
   if (!root.dataset.theme) updateThemeUI();
 });
+
+/* Copiar correo */
+const copyButton = document.querySelector("[data-copy-mail]");
+
+const copyText = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    /* algunos navegadores lo bloquean; se intenta el método antiguo */
+  }
+
+  const field = document.createElement("textarea");
+  field.value = text;
+  field.setAttribute("readonly", "");
+  field.style.cssText = "position:fixed;top:0;opacity:0";
+  document.body.append(field);
+  field.select();
+  let done = false;
+  try {
+    done = document.execCommand("copy");
+  } catch {
+    done = false;
+  }
+  field.remove();
+  return done;
+};
+
+if (copyButton) {
+  copyButton.setAttribute("aria-label", label.copyMail);
+  let restore;
+
+  copyButton.addEventListener("click", async () => {
+    const done = await copyText(copyButton.dataset.copyMail);
+
+    // Si el navegador no deja copiar, se selecciona el correo para hacerlo a mano.
+    if (!done) {
+      const value = copyButton.parentElement.querySelector(
+        ".contact-link__value",
+      );
+      const range = document.createRange();
+      range.selectNodeContents(value);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+
+    copyButton.textContent = done ? label.copied : label.copyManually;
+    copyButton.classList.add("is-copied");
+    clearTimeout(restore);
+    restore = setTimeout(() => {
+      copyButton.textContent = label.copy;
+      copyButton.classList.remove("is-copied");
+    }, 2200);
+  });
+}
 
 /* Año */
 const year = document.querySelector("[data-year]");
@@ -95,7 +163,7 @@ const navigation = document.querySelector("[data-navigation]");
 const closeMenu = () => {
   if (!menuToggle || !navigation) return;
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Abrir navegación");
+  menuToggle.setAttribute("aria-label", label.openMenu);
   navigation.classList.remove("is-open");
 };
 
@@ -103,10 +171,7 @@ menuToggle?.addEventListener("click", () => {
   if (!navigation) return;
   const open = menuToggle.getAttribute("aria-expanded") !== "true";
   menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.setAttribute(
-    "aria-label",
-    open ? "Cerrar navegación" : "Abrir navegación",
-  );
+  menuToggle.setAttribute("aria-label", open ? label.closeMenu : label.openMenu);
   navigation.classList.toggle("is-open", open);
 });
 
